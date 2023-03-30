@@ -13,9 +13,9 @@ export default function Details(props) {
           Background info:
         </label>
         <textarea
-          value={callerState.backgroundInhtmlFormation}
+          value={callerState.backgroundInformation}
           onChange={(e) => {
-            callerState.backgroundInhtmlFormation = e.target.value;
+            callerState.backgroundInformation = e.target.value;
             props.updateCallState(callerState);
           }}
           id='bg-info'

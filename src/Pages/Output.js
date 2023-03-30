@@ -14,6 +14,8 @@ const Output = () => {
     troubleshootingNotes,
   } = location.state.callState;
 
+  console.log(backgroundInformation);
+
   return (
     <div className='w-[95%] mx-auto text-left py-5 pl-10 bg-white'>
       <div id='callerInfo'>
