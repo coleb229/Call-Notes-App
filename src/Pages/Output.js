@@ -45,6 +45,15 @@ const Output = () => {
         <p className='font-semibold'>nextSteps:</p>
         <p className='text-blue-600 ml-5 pb-2'>{nextSteps}</p>
       </div>
+      <div id='handoff'>
+        <p className='mx-10 flex'>
+          <p className='font-semibold underline'>{callerDBA + ':'}</p>
+          {callSummary}
+        </p>
+        <p className='mx-10'>
+          <p className='font-semibold'>Ticket:</p>
+        </p>
+      </div>
     </div>
   );
 };
