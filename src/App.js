@@ -8,7 +8,7 @@ function App() {
   return (
     <div className='App bg-cyan-800'>
       <Routes>
-        <Route path={'/Call-Notes-App' || '/'} element={<CallerForm />} />
+        <Route path={'/Call-Notes-App'} element={<CallerForm />} />
         <Route path='/output' element={<Output />} />
       </Routes>
     </div>
