@@ -6,9 +6,9 @@ import Output from './Pages/Output';
 
 function App() {
   return (
-    <div className='App bg-cyan-800 h-screen max-h-screen'>
-      <Routes basename={process.env.PUBLIC_URL}>
-        <Route path={'/' || '/Call-Notes-App'} element={<CallerForm />} />
+    <div className='App bg-cyan-800'>
+      <Routes>
+        <Route path={'/Call-Notes-App' || '/'} element={<CallerForm />} />
         <Route path='/output' element={<Output />} />
       </Routes>
     </div>

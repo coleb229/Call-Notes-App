@@ -26,7 +26,7 @@ const Output = () => {
         <p className='text-blue-600 ml-5 pb-2'>{callerNumber}</p>
         <p className='font-semibold'>Caller DBA:</p>
         <p className='text-blue-600 ml-5 pb-2'>{callerDBA}</p>
-        <p className='font-semibold'>backgroundInformation:</p>
+        <p className='font-semibold'>Background Information:</p>
         <p className='text-blue-600 ml-5 pb-2'>{backgroundInformation}</p>
         <p className='font-semibold'>Call Notes:</p>
         <ol className='list-decimal ml-10'>
@@ -36,16 +36,16 @@ const Output = () => {
         </ol>
         <p className='font-semibold'>Call Summary:</p>
         <p className='text-blue-600 ml-5 pb-2'>{callSummary}</p>
-        <p className='font-semibold'>troubleshootingNotes:</p>
+        <p className='font-semibold'>Troubleshooting Notes:</p>
         <ol className='list-decimal ml-10'>
           {listTroubleshootingSteps.map((i) => {
             return <li className='text-md text-blue-600'>{i}</li>;
           })}
         </ol>
-        <p className='font-semibold'>nextSteps:</p>
+        <p className='font-semibold'>Next Steps:</p>
         <p className='text-blue-600 ml-5 pb-2'>{nextSteps}</p>
       </div>
-      <div id='handoff'>
+      <div className='bg-gray-200 w-1/2 mx-auto' id='handoff'>
         <p className='mx-10 flex'>
           <p className='font-bold underline'>{callerDBA + ':'}</p>
           {callSummary}
