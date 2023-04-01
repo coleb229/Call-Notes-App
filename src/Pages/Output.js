@@ -47,11 +47,11 @@ const Output = () => {
       </div>
       <div id='handoff'>
         <p className='mx-10 flex'>
-          <p className='font-semibold underline'>{callerDBA + ':'}</p>
+          <p className='font-bold underline'>{callerDBA + ':'}</p>
           {callSummary}
         </p>
         <p className='mx-10'>
-          <p className='font-semibold'>Ticket:</p>
+          <p className='font-bold'>Ticket:</p>
         </p>
       </div>
     </div>
