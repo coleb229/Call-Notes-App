@@ -18,7 +18,7 @@ const Output = () => {
   let listTroubleshootingSteps = troubleshootingNotes.split('\n');
 
   return (
-    <div className='w-[95%] mx-auto text-left py-5 pl-10 bg-white'>
+    <div className='w-[95%] mx-auto text-left py-5 pl-10 bg-white min-h-screen'>
       <div id='callerInfo'>
         <p className='font-semibold text-sm'>Caller Name:</p>
         <p className='text-blue-600 ml-5 pb-2'>{callerName}</p>
