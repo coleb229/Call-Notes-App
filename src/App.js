@@ -3,6 +3,7 @@ import './App.css';
 import CallerForm from './components/caller/callerForm';
 import { Route, Routes } from 'react-router-dom';
 import Output from './Pages/Output';
+import JustHandoff from './components/JustHandoff';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Route path='/Call-Notes-App' element={<CallerForm />} />
         <Route path='/' element={<CallerForm />} />
         <Route path='/output' element={<Output />} />
+        <Route path='/just-handoff' element={<JustHandoff />} />
       </Routes>
     </div>
   );
