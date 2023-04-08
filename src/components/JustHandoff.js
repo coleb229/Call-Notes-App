@@ -26,6 +26,13 @@ const JustHandoff = () => {
 const HandoffForm = (props) => {
   const callerState = Object.assign({}, props.callState);
 
+  const ref = React.useRef(null);
+
+  const resetForm = (e) => {
+    ref.value('');
+    e.preventDefault();
+  };
+
   return (
     <form className='bg-gray-800 mx-4 shadow-md rounded px-8 pt-6 pb-8 max-h-screen'>
       <label
@@ -42,6 +49,7 @@ const HandoffForm = (props) => {
           props.updateCallState(callerState);
         }}
         id='dba'
+        ref={ref}
         placeholder='Business Name'
         className='mb-2 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
       />
@@ -60,6 +68,7 @@ const HandoffForm = (props) => {
           props.updateCallState(callerState);
         }}
         id='summary'
+        ref={ref}
         placeholder='Business Name'
         className='mb-2 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
       />
@@ -78,15 +87,16 @@ const HandoffForm = (props) => {
           props.updateCallState(callerState);
         }}
         id='ticket'
+        ref={ref}
         placeholder='Business Name'
         className='mb-2 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
       />
-      <Link
-        to='/just-handoff'
+      <button
+        onClick={resetForm}
         className='text-white font-semibold text-lg py-5 hover:text-slate-300'
       >
-        Reset
-      </Link>
+        Click me
+      </button>
     </form>
   );
 };
