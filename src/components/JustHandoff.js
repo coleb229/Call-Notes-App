@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const JustHandoff = () => {
   const [callState, setCallState] = useState({
@@ -11,16 +12,11 @@ const JustHandoff = () => {
     setCallState(callerInfo);
   };
 
-  const reset = () => {
-    window.location.reload();
-  };
-
   return (
     <div className='h-[95vh]'>
       <HandoffForm
         callState={callState}
         updateCallState={updateCallStateHandler}
-        reset={reset}
       />
       <HandoffOutput callState={callState} />
     </div>
@@ -29,7 +25,6 @@ const JustHandoff = () => {
 
 const HandoffForm = (props) => {
   const callerState = Object.assign({}, props.callState);
-  const resetForm = props.reset;
 
   return (
     <form className='bg-gray-800 mx-4 shadow-md rounded px-8 pt-6 pb-8 max-h-screen'>
@@ -86,12 +81,12 @@ const HandoffForm = (props) => {
         placeholder='Business Name'
         className='mb-2 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
       />
-      <button
-        onClick={resetForm}
+      <Link
+        to='/just-handoff'
         className='text-white font-semibold text-lg py-5 hover:text-slate-300'
       >
         Reset
-      </button>
+      </Link>
     </form>
   );
 };
