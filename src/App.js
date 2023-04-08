@@ -6,6 +6,7 @@ import Output from './Pages/Output';
 import JustHandoff from './components/JustHandoff';
 import FormNav from './components/caller/formNav';
 import Rekey from './components/Rekey';
+import ErrorPage from './Pages/404';
 
 function App() {
   return (
@@ -16,6 +17,8 @@ function App() {
         <Route path='/output' element={<Output />} />
         <Route path='/just-handoff' element={<JustHandoff />} />
         <Route path='/rekey' element={<Rekey />} />
+
+        <Route path='*' element={<ErrorPage />} />
       </Routes>
       <FormNav />
     </div>
