@@ -22,7 +22,7 @@ export default function InputForm() {
   };
 
   return (
-    <form className='bg-gray-800 mx-4 shadow-md rounded px-8 pt-6 pb-8 h-screen max-h-screen'>
+    <form className='bg-gray-800 mx-4 shadow-md rounded px-8 pt-6 pb-8 h-[95vh]'>
       <CallerInfo
         callState={callState}
         updateCallState={updateCallStateHandler}

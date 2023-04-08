@@ -12,7 +12,7 @@ const JustHandoff = () => {
   };
 
   return (
-    <div className='h-screen'>
+    <div className='h-[95vh]'>
       <HandoffForm
         callState={callState}
         updateCallState={updateCallStateHandler}
