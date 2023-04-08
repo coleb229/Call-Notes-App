@@ -9,6 +9,10 @@ import Rekey from './components/Rekey';
 import ErrorPage from './Pages/404';
 
 function App() {
+  useEffect(() => {
+    document.title = 'Template App';
+  }, []);
+
   return (
     <div className='App bg-cyan-800'>
       <Routes>
