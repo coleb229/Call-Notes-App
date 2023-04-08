@@ -5,10 +5,13 @@ const FormNav = () => {
     <div className='w-full h-[5vh]'>
       <ul className='flex justify-around'>
         <li className='pt-2 text-white font-semibold text-lg'>
-          <Link to='/just-handoff'>Handoff Form</Link>
+          <Link to='/just-handoff'>Handoff Template</Link>
         </li>
         <li className='pt-2 text-white font-semibold text-lg'>
-          <Link to='/Call-Notes-App'>Full Form</Link>
+          <Link to='/Call-Notes-App'>Full Template</Link>
+        </li>
+        <li className='pt-2 text-white font-semibold text-lg'>
+          <Link to='/rekey'>Rekey Template</Link>
         </li>
       </ul>
     </div>

@@ -5,6 +5,7 @@ import { Route, Routes } from 'react-router-dom';
 import Output from './Pages/Output';
 import JustHandoff from './components/JustHandoff';
 import FormNav from './components/caller/formNav';
+import Rekey from './components/Rekey';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path='/' element={<CallerForm />} />
         <Route path='/output' element={<Output />} />
         <Route path='/just-handoff' element={<JustHandoff />} />
+        <Route path='/rekey' element={<Rekey />} />
       </Routes>
       <FormNav />
     </div>
