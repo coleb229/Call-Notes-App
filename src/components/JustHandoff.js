@@ -29,8 +29,7 @@ const HandoffForm = (props) => {
   const ref = React.useRef(null);
 
   const resetForm = (e) => {
-    ref.value('');
-    e.preventDefault();
+    null;
   };
 
   return (
@@ -69,7 +68,7 @@ const HandoffForm = (props) => {
         }}
         id='summary'
         ref={ref}
-        placeholder='Business Name'
+        placeholder='Summary of interaction'
         className='mb-2 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
       />
 
@@ -88,7 +87,7 @@ const HandoffForm = (props) => {
         }}
         id='ticket'
         ref={ref}
-        placeholder='Business Name'
+        placeholder='CRM Ticket link'
         className='mb-2 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
       />
       <button
