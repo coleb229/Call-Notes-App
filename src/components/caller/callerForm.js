@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import CallerInfo from './callerInfo'
 import CallNotes from './callNotes'
-import TroubleshootingNotes from './troubleShootingNotes'
 import Details from './callerDetails'
 import Controls from './controls'
 import Preview from './preview'

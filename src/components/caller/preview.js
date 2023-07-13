@@ -1,17 +1,14 @@
 export default function Preview(props) {
   const {
-    backgroundInformation,
     callNotes,
     callSummary,
     callerDBA,
     callerName,
     callerNumber,
     nextSteps,
-    troubleshootingNotes,
   } = props.callState
 
   let listCallNotes = callNotes.split('\n')
-  let listTroubleshootingSteps = troubleshootingNotes.split('\n')
 
   return (
     <div className='h-[60vh] w-[98%] mx-auto px-2'>
@@ -31,10 +28,6 @@ export default function Preview(props) {
         <p className='text-blue-600 ml-5 pb-2 text-xs'>{callerNumber}</p>
         <p className='font-semibold text-xs'>Caller DBA:</p>
         <p className='text-blue-600 ml-5 pb-2 text-xs'>{callerDBA}</p>
-        <p className='font-semibold text-xs'>Background Information:</p>
-        <p className='text-blue-600 ml-5 pb-2 text-xs'>
-          {backgroundInformation}
-        </p>
         <p className='font-semibold text-xs'>Call Notes:</p>
         <ol className='list-decimal ml-10'>
           {listCallNotes.map((i) => {
@@ -43,12 +36,6 @@ export default function Preview(props) {
         </ol>
         <p className='font-semibold text-xs'>Call Summary:</p>
         <p className='text-blue-600 ml-5 pb-2 text-xs'>{callSummary}</p>
-        <p className='font-semibold text-xs'>Troubleshooting Notes:</p>
-        <ol className='list-decimal ml-10'>
-          {listTroubleshootingSteps.map((i) => {
-            return <li className='text-xs text-blue-600'>{i}</li>
-          })}
-        </ol>
         <p className='font-semibold text-xs'>Next Steps:</p>
         <p className='text-blue-600 ml-5 pb-2 text-xs'>{nextSteps}</p>
         <div className='bg-gray-200 w-5/6 mx-auto' id='handoff'>

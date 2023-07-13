@@ -4,18 +4,15 @@ import { useLocation } from 'react-router-dom'
 const Output = () => {
   const location = useLocation()
   const {
-    backgroundInformation,
     callNotes,
     callSummary,
     callerDBA,
     callerName,
     callerNumber,
     nextSteps,
-    troubleshootingNotes,
   } = location.state.callState
 
   let listCallNotes = callNotes.split('\n')
-  let listTroubleshootingSteps = troubleshootingNotes.split('\n')
 
   return (
     <div className='w-[95%] mx-auto text-left py-5 pl-10 bg-white min-h-screen'>
@@ -26,8 +23,6 @@ const Output = () => {
         <p className='text-blue-600 ml-5 pb-2'>{callerNumber}</p>
         <p className='font-semibold'>Caller DBA:</p>
         <p className='text-blue-600 ml-5 pb-2'>{callerDBA}</p>
-        <p className='font-semibold'>Background Information:</p>
-        <p className='text-blue-600 ml-5 pb-2'>{backgroundInformation}</p>
         <p className='font-semibold'>Call Notes:</p>
         <ol className='list-decimal ml-10'>
           {listCallNotes.map((i) => {
