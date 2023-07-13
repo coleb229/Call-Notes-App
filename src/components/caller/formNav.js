@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 
 const FormNav = () => {
   return (
@@ -13,9 +13,12 @@ const FormNav = () => {
         <li className='pt-2 text-white font-semibold text-lg hover:text-slate-300'>
           <Link to='/rekey'>Rekey Template</Link>
         </li>
+        <li className='pt-2 text-white font-semibold text-lg hover:text-slate-300'>
+          <Link to='/call-log'>Call Log</Link>
+        </li>
       </ul>
     </div>
-  );
-};
+  )
+}
 
-export default FormNav;
+export default FormNav
