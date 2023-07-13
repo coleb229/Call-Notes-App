@@ -39,7 +39,7 @@ export default function Preview(props) {
         <p className='font-semibold text-xs'>Next Steps:</p>
         <p className='text-blue-600 ml-5 pb-2 text-xs'>{nextSteps}</p>
         <div className='bg-gray-200 w-5/6 mx-auto' id='handoff'>
-          <p className='mx-5 flex'>
+          <p className='mx-5 flex text-xs'>
             <p className='font-bold underline text-xs'>{callerDBA + ':'}</p>
             {callSummary}
           </p>
