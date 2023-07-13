@@ -27,11 +27,11 @@ const HandoffForm = (props) => {
   const callerState = Object.assign({}, props.callState);
 
   const ref = React.useRef(null);
-
+  /*
   const resetForm = (e) => {
     null;
   };
-
+*/
   return (
     <form className='bg-gray-800 mx-4 shadow-md rounded px-8 pt-6 pb-8 max-h-screen'>
       <label
@@ -91,7 +91,7 @@ const HandoffForm = (props) => {
         className='mb-2 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
       />
       <button
-        onClick={resetForm}
+        onClick={null}
         className='text-white font-semibold text-lg py-5 hover:text-slate-300'
       >
         Click me
