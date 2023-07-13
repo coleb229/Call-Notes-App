@@ -19,7 +19,7 @@ export default function Preview(props) {
         className='text-left block text-white text-sm font-bold my-2'
         htmlFor='preview'
       >
-        Call Notes:
+        Preview:
       </label>
       <div
         id='preview'
