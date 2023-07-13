@@ -20,9 +20,9 @@ export default function CallLog() {
         <h2>Ticket: {callState.ticket ? 'Yes' : 'No'}</h2>
         <h2>Follow Up: {callState.followUp ? 'Yes' : 'No'}</h2>
       </div>
-      <form className='grid grid-rows-5 grid-flow-col gap-4 bg-gray-800 text-white pt-4 w-4/6 mx-auto rounded-lg'>
+      <form className='grid grid-rows-5 grid-flow-col gap-4 bg-gray-800 pt-4 w-4/6 mx-auto rounded-lg'>
         <div>
-          <label htmlFor='merchant' className='pr-4'>
+          <label htmlFor='merchant' className='pr-4 text-white'>
             Merchant -{'>'}
           </label>
           <input
@@ -36,7 +36,7 @@ export default function CallLog() {
           />
         </div>
         <div>
-          <label htmlFor='reason' className='pr-4'>
+          <label htmlFor='reason' className='pr-4 text-white'>
             Reason -{'>'}
           </label>
           <input
@@ -50,7 +50,7 @@ export default function CallLog() {
           />
         </div>
         <div>
-          <label htmlFor='phone' className='pr-4'>
+          <label htmlFor='phone' className='pr-4 text-white'>
             Phone -{'>'}
           </label>
           <input
@@ -64,9 +64,11 @@ export default function CallLog() {
           />
         </div>
         <div>
-          <label htmlFor='resolved'>Resolved</label>
+          <label htmlFor='resolved' className='text-white'>
+            Resolved
+          </label>
           <input
-            className='border-2 border-gray-500'
+            className='border-2 border-gray-500 mr-6 ml-2'
             type='checkbox'
             name='resolved'
             checked={callState.resolved}
@@ -74,9 +76,11 @@ export default function CallLog() {
               setCallState({ ...callState, resolved: e.target.checked })
             }
           />
-          <label htmlFor='followUp'>Follow Up</label>
+          <label htmlFor='followUp' className='text-white'>
+            Follow Up
+          </label>
           <input
-            className='border-2 border-gray-500'
+            className='border-2 border-gray-500 mr-6 ml-2'
             type='checkbox'
             name='followUp'
             checked={callState.followUp}
@@ -84,11 +88,11 @@ export default function CallLog() {
               setCallState({ ...callState, followUp: e.target.checked })
             }
           />
-        </div>
-        <div>
-          <label htmlFor='ticket'>Ticket</label>
+          <label htmlFor='ticket' className='text-white'>
+            Ticket
+          </label>
           <input
-            className='border-2 border-gray-500'
+            className='border-2 border-gray-500 ml-2'
             type='checkbox'
             name='ticket'
             checked={callState.ticket}
