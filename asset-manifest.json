@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Call-Notes-App/static/css/main.a6a40824.css",
-    "main.js": "/Call-Notes-App/static/js/main.8227a3e6.js",
+    "main.css": "/Call-Notes-App/static/css/main.428deb85.css",
+    "main.js": "/Call-Notes-App/static/js/main.966d650e.js",
     "static/js/787.370c659c.chunk.js": "/Call-Notes-App/static/js/787.370c659c.chunk.js",
     "index.html": "/Call-Notes-App/index.html",
-    "main.a6a40824.css.map": "/Call-Notes-App/static/css/main.a6a40824.css.map",
-    "main.8227a3e6.js.map": "/Call-Notes-App/static/js/main.8227a3e6.js.map",
+    "main.428deb85.css.map": "/Call-Notes-App/static/css/main.428deb85.css.map",
+    "main.966d650e.js.map": "/Call-Notes-App/static/js/main.966d650e.js.map",
     "787.370c659c.chunk.js.map": "/Call-Notes-App/static/js/787.370c659c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a6a40824.css",
-    "static/js/main.8227a3e6.js"
+    "static/css/main.428deb85.css",
+    "static/js/main.966d650e.js"
   ]
 }
