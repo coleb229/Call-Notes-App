@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const JustHandoff = () => {
   const [callState, setCallState] = useState({
     callerDBA: '',
     callSummary: '',
     ticket: '',
-  });
+  })
 
   const updateCallStateHandler = (callerInfo) => {
-    setCallState(callerInfo);
-  };
+    setCallState(callerInfo)
+  }
 
   return (
     <div className='h-[95vh]'>
@@ -20,13 +20,13 @@ const JustHandoff = () => {
       />
       <HandoffOutput callState={callState} />
     </div>
-  );
-};
+  )
+}
 
 const HandoffForm = (props) => {
-  const callerState = Object.assign({}, props.callState);
+  const callerState = Object.assign({}, props.callState)
 
-  const ref = React.useRef(null);
+  const ref = React.useRef(null)
   /*
   const resetForm = (e) => {
     null;
@@ -44,8 +44,8 @@ const HandoffForm = (props) => {
         type='text'
         value={callerState.callerDBA}
         onChange={(e) => {
-          callerState.callerDBA = e.target.value;
-          props.updateCallState(callerState);
+          callerState.callerDBA = e.target.value
+          props.updateCallState(callerState)
         }}
         id='dba'
         ref={ref}
@@ -63,8 +63,8 @@ const HandoffForm = (props) => {
         type='text'
         value={callerState.callSummary}
         onChange={(e) => {
-          callerState.callSummary = e.target.value;
-          props.updateCallState(callerState);
+          callerState.callSummary = e.target.value
+          props.updateCallState(callerState)
         }}
         id='summary'
         ref={ref}
@@ -82,8 +82,8 @@ const HandoffForm = (props) => {
         type='text'
         value={callerState.ticket}
         onChange={(e) => {
-          callerState.ticket = e.target.value;
-          props.updateCallState(callerState);
+          callerState.ticket = e.target.value
+          props.updateCallState(callerState)
         }}
         id='ticket'
         ref={ref}
@@ -94,14 +94,14 @@ const HandoffForm = (props) => {
         onClick={null}
         className='text-white font-semibold text-lg py-5 hover:text-slate-300'
       >
-        Click me
+        Do not click me
       </button>
     </form>
-  );
-};
+  )
+}
 
 const HandoffOutput = (props) => {
-  const { callerDBA, callSummary, ticket } = props.callState;
+  const { callerDBA, callSummary, ticket } = props.callState
 
   return (
     <div className='bg-gray-200 w-1/2 mx-auto' id='handoff'>
@@ -114,7 +114,7 @@ const HandoffOutput = (props) => {
         {ticket}
       </p>
     </div>
-  );
-};
+  )
+}
 
-export default JustHandoff;
+export default JustHandoff
