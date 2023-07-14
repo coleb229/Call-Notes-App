@@ -21,6 +21,13 @@ export default function InputForm() {
     setCallState(callerInfo)
   }
 
+  const copyTicket = (e) => {
+    e.preventDefault()
+    navigator.clipboard.writeText(
+      `Caller Name: ${callState.callerName}\nCaller Number: ${callState.callerNumber}\nCaller DBA: ${callState.callerDBA}\nCall Notes: \n${callState.callNotes}\nTroubleshooting Notes: ${callState.troubleshootingNotes}\nBackground Information: ${callState.backgroundInformation}\nCall Summary: ${callState.callSummary}\nNext Steps: ${callState.nextSteps}`,
+    )
+  }
+
   return (
     <form className='bg-gray-800 mx-4 shadow-md rounded px-8 pt-6 pb-8 h-[95vh]'>
       <CallerInfo
@@ -35,7 +42,7 @@ export default function InputForm() {
         <Preview callState={callState} />
       </div>
       <Details callState={callState} updateCallState={updateCallStateHandler} />
-      <Controls callState={callState} />
+      <Controls callState={callState} copyToClipboard={copyTicket} />
     </form>
   )
 }
