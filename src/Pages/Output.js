@@ -1,7 +1,7 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom'
 
-const Output = () => {
+const Output = (props) => {
   const location = useLocation()
   const {
     callNotes,
@@ -10,7 +10,7 @@ const Output = () => {
     callerName,
     callerNumber,
     nextSteps,
-  } = location.state.callState
+  } = location.state
 
   let listCallNotes = callNotes.split('\n')
 

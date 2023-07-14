@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react'
 
 export default function CallNotes(props) {
-  const callerState = Object.assign({}, props.callState);
+  const callerState = Object.assign({}, props.callState)
 
   return (
     <div className='h-[60vh] w-[98%] mx-auto px-2'>
@@ -14,13 +14,13 @@ export default function CallNotes(props) {
       <textarea
         value={callerState.callNotes}
         onChange={(e) => {
-          callerState.callNotes = e.target.value;
-          props.updateCallState(callerState);
+          callerState.callNotes = e.target.value
+          props.updateCallState(callerState)
         }}
         id='notes'
         type='text'
         className='h-full mb-2 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
       />
     </div>
-  );
+  )
 }
