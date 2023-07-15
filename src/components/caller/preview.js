@@ -1,3 +1,5 @@
+import { useState } from 'react'
+
 export default function Preview(props) {
   const {
     callNotes,
@@ -7,6 +9,12 @@ export default function Preview(props) {
     callerNumber,
     nextSteps,
   } = props.callState
+
+  const [callState, setCallState] = useState({
+    resolved: true,
+    ticket: true,
+    followUp: false,
+  })
 
   let listCallNotes = callNotes.split('\n')
 
@@ -46,6 +54,72 @@ export default function Preview(props) {
           <p className='mx-5'>
             <p className='font-bold text-xs'>Ticket:</p>
           </p>
+        </div>
+        <div className=''>
+          <div className='w-1/3 flex'>
+            <div>
+              <label
+                className='text-left text-xs font-semibold my-2'
+                htmlFor='resolved'
+              >
+                Resolved:
+              </label>
+              <input
+                type='checkbox'
+                id='resolved'
+                name='resolved'
+                className='m-2'
+                checked={callState.resolved}
+                onChange={(e) =>
+                  setCallState({ ...callState, resolved: e.target.checked })
+                }
+              />
+            </div>
+            <div>
+              <label
+                className='text-left text-xs font-semibold my-2'
+                htmlFor='ticket'
+              >
+                Ticket:
+              </label>
+              <input
+                type='checkbox'
+                id='ticket'
+                name='ticket'
+                className='m-2'
+                checked={callState.ticket}
+                onChange={(e) =>
+                  setCallState({ ...callState, ticket: e.target.checked })
+                }
+              />
+            </div>
+            <div>
+              <label
+                className='text-left text-xs font-semibold my-2'
+                htmlFor='followUp'
+              >
+                FollowUp:
+              </label>
+              <input
+                type='checkbox'
+                id='followUp'
+                name='followUp'
+                className='m-2'
+                checked={callState.followUp}
+                onChange={(e) =>
+                  setCallState({ ...callState, followUp: e.target.checked })
+                }
+              />
+            </div>
+          </div>
+          <div className='py-10 w-full mx-auto bg-white rounded text-xs text-left pl-48'>
+            <h2>Merchant: {callerDBA}</h2>
+            <h2>Reason: {callSummary}</h2>
+            <h2>Phone: {callerNumber}</h2>
+            <h2>Resolved: {callState.resolved ? 'Yes' : 'No'}</h2>
+            <h2>Ticket: {callState.ticket ? 'Yes' : 'No'}</h2>
+            <h2>Follow Up: {callState.followUp ? 'Yes' : 'No'}</h2>
+          </div>
         </div>
       </div>
     </div>
