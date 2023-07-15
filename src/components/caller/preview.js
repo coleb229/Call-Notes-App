@@ -46,6 +46,7 @@ export default function Preview(props) {
         <p className='text-blue-600 ml-5 pb-2 text-xs'>{callSummary}</p>
         <p className='font-semibold text-xs'>Next Steps:</p>
         <p className='text-blue-600 ml-5 pb-2 text-xs'>{nextSteps}</p>
+        <hr className='mt-5 pt-5' /> {/* Handoff Section */}
         <div className='bg-gray-200 w-5/6 mx-auto' id='handoff'>
           <p className='mx-5 flex text-xs'>
             <p className='font-bold underline text-xs'>{callerDBA + ':'}</p>
@@ -55,9 +56,10 @@ export default function Preview(props) {
             <p className='font-bold text-xs'>Ticket:</p>
           </p>
         </div>
-        <div className=''>
-          <div className='w-1/3 flex'>
-            <div>
+        <hr className='mt-5' /> {/* Call Log Section */}
+        <div className='flex justify-around'>
+          <div className='w-1/3 align'>
+            <div className='flex pt-10'>
               <label
                 className='text-left text-xs font-semibold my-2'
                 htmlFor='resolved'
@@ -75,7 +77,7 @@ export default function Preview(props) {
                 }
               />
             </div>
-            <div>
+            <div className='flex'>
               <label
                 className='text-left text-xs font-semibold my-2'
                 htmlFor='ticket'
@@ -93,7 +95,7 @@ export default function Preview(props) {
                 }
               />
             </div>
-            <div>
+            <div className='flex'>
               <label
                 className='text-left text-xs font-semibold my-2'
                 htmlFor='followUp'
@@ -112,7 +114,7 @@ export default function Preview(props) {
               />
             </div>
           </div>
-          <div className='py-10 w-full mx-auto bg-white rounded text-xs text-left pl-48'>
+          <div className='p-10 w-full mx-auto bg-white rounded text-xs text-left'>
             <h2>Merchant: {callerDBA}</h2>
             <h2>Reason: {callSummary}</h2>
             <h2>Phone: {callerNumber}</h2>
